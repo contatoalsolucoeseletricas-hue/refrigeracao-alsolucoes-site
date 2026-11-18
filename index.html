@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#020617" />
+  <title>AL Soluções — Refrigeração, Climatização &amp; Elétrica</title>
+  <meta name="description" content="Instalação, higienização, carga de gás e manutenção de ar-condicionado Split/Inverter, câmaras frias e elétrica residencial/comercial. Orçamento e agendamento direto no WhatsApp." />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #020617;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .font-mono-tech {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .glass-card {
+      background: #0d1526;
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    .cyan-glow {
+      box-shadow: 0 0 22px rgba(6, 182, 212, 0.25);
+    }
+    .chips-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .chips-scroll::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#020617] text-slate-100 pb-24 antialiased">
+
+  <!-- Barra Superior Fixa Mobile-First (Estilo DroneHub) -->
+  <header class="sticky top-0 z-40 bg-[#020617]/90 backdrop-blur-md border-b border-cyan-500/20">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-mono-tech font-bold text-base cyan-glow">
+          ❄️
+        </div>
+        <div>
+          <h1 id="hdrCompanyName" class="text-sm sm:text-base font-extrabold tracking-tight text-white leading-tight">
+            AL Soluções · Refrigeração &amp; Clima
+          </h1>
+          <p id="hdrRegion" class="text-[11px] text-cyan-300/80 font-mono-tech">
+            Canoas · Porto Alegre e Região Metropolitana
+          </p>
+        </div>
+      </div>
+
+      <button id="btnOpenSettings" type="button" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-cyan-500/35 text-xs font-semibold text-cyan-300 hover:bg-slate-800 transition shrink-0">
+        ⚙️ Editar Dados
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 pt-6 space-y-8">
+
+    <!-- HERO / CHAMADA PRINCIPAL -->
+    <section class="glass-card rounded-3xl p-6 relative overflow-hidden">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-[11px] font-semibold text-cyan-300 mb-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        ATENDIMENTO TÉCNICO ESPECIALIZADO · GARANTIA NO SERVIÇO
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+        Climatização, Refrigeração &amp; Elétrica com Diagnóstico Preciso
+      </h2>
+      <p class="mt-2.5 text-sm text-slate-300 leading-relaxed">
+        Instalação padrão fabricante (vácuo, flange e teste de estanqueidade), higienização completa, carga de fluido refrigerante, manutenção de Split/Inverter, geladeiras e câmaras frias.
+      </p>
+
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button id="btnHeroWA" type="button" class="py-3.5 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition flex items-center justify-center gap-2 shadow-lg">
+          <span>📲 Chamar Técnico no WhatsApp</span>
+        </button>
+        <a href="#calc-btu" class="py-3.5 px-5 rounded-2xl bg-slate-900 border border-cyan-500/40 hover:bg-slate-800 text-cyan-300 font-bold text-sm transition text-center">
+          🧮 Calcular BTUs do Ambiente
+        </a>
+      </div>
+
+      <!-- KPIs Rápidos -->
+      <div class="mt-6 grid grid-cols-3 gap-2.5 text-center">
+        <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-3">
+          <span class="text-cyan-400 font-mono-tech font-bold text-base block">100%</span>
+          <span class="text-[11px] text-slate-400">Vácuo &amp; Teste</span>
+        </div>
+        <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-3">
+          <span class="text-emerald-400 font-mono-tech font-bold text-base block">Split / Inv</span>
+          <span class="text-[11px] text-slate-400">Todas as Marcas</span>
+        </div>
+        <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-3">
+          <span class="text-amber-400 font-mono-tech font-bold text-base block">NF &amp; Garantia</span>
+          <span class="text-[11px] text-slate-400">Serviço Seguro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA INTERATIVA DE BTUs (MOBILE-FIRST) -->
+    <section id="calc-btu" class="glass-card rounded-3xl p-6">
+      <div class="flex items-center justify-between gap-2 mb-4">
+        <div>
+          <span class="text-[11px] font-mono-tech uppercase tracking-wider text-cyan-400">Ferramenta Gratuita</span>
+          <h3 class="text-xl font-bold text-white">Calculadora Rápida de BTUs</h3>
+        </div>
+        <span id="btuResultBadge" class="px-3.5 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 font-mono-tech font-bold text-sm">
+          9.000 BTUs
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <div>
+          <label for="inAreaM2" class="block text-slate-400 font-semibold mb-1">Área do Quarto/Sala (m²)</label>
+          <input id="inAreaM2" type="number" min="4" max="150" value="15" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono-tech focus:outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+          <label for="inPeople" class="block text-slate-400 font-semibold mb-1">Pessoas no Ambiente</label>
+          <input id="inPeople" type="number" min="1" max="40" value="2" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono-tech focus:outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+          <label for="inSun" class="block text-slate-400 font-semibold mb-1">Incidência de Sol</label>
+          <select id="inSun" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-cyan-400">
+            <option value="600">Sombra / Pouco Sol (600 BTU/m²)</option>
+            <option value="800">Sol Forte / Tarde (800 BTU/m²)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <p id="btuExplanation" class="text-xs text-slate-300">
+          Capacidade recomendada: <strong class="text-cyan-300">Split Inverter 9.000 ou 12.000 BTUs</strong>.
+        </p>
+        <button id="btnSendBtuWA" type="button" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shrink-0 transition">
+          Orçar Instalação Dessa Capacidade
+        </button>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE SERVIÇOS COM CHIPS DESLIZÁVEIS (PADRÃO DRONEHUB) -->
+    <section id="servicos" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-mono-tech uppercase tracking-wider text-cyan-400">Catálogo Técnico</span>
+          <h3 class="text-xl font-bold text-white">Serviços de Refrigeração &amp; Elétrica</h3>
+        </div>
+      </div>
+
+      <!-- Chips de Filtro -->
+      <div class="chips-scroll pb-1">
+        <button type="button" data-cat="todos" class="cat-chip px-4 py-2 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 whitespace-nowrap">
+          Todos (8)
+        </button>
+        <button type="button" data-cat="ar" class="cat-chip px-4 py-2 rounded-full text-xs font-bold bg-slate-900 text-slate-400 border border-slate-800 whitespace-nowrap">
+          ❄️ Ar-Condicionado Split/Inverter
+        </button>
+        <button type="button" data-cat="comercial" class="cat-chip px-4 py-2 rounded-full text-xs font-bold bg-slate-900 text-slate-400 border border-slate-800 whitespace-nowrap">
+          🧊 Refrigeração &amp; Câmaras Frias
+        </button>
+        <button type="button" data-cat="eletrica" class="cat-chip px-4 py-2 rounded-full text-xs font-bold bg-slate-900 text-slate-400 border border-slate-800 whitespace-nowrap">
+          ⚡ Elétrica &amp; Quadros
+        </button>
+      </div>
+
+      <div id="servicesList" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5"></div>
+    </section>
+
+    <!-- AGENDAMENTO RÁPIDO DE VISITA TÉCNICA -->
+    <section id="visita" class="glass-card rounded-3xl p-6 space-y-4">
+      <div>
+        <span class="text-[11px] font-mono-tech uppercase tracking-wider text-emerald-400">Atendimento Ágil</span>
+        <h3 class="text-xl font-bold text-white">Solicitar Visita Técnica ou Orçamento</h3>
+        <p class="text-xs text-slate-400 mt-1">Preencha os detalhes abaixo para gerar o pedido completo no WhatsApp.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+        <input id="inClientName" type="text" placeholder="Seu nome" class="px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-cyan-400" />
+        <input id="inClientCity" type="text" placeholder="Bairro / Cidade (ex: Canoas, Centro)" class="px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-cyan-400" />
+        <select id="inEquipType" class="px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-cyan-400">
+          <option value="Ar-Condicionado Split / Inverter">Ar-Condicionado Split / Inverter</option>
+          <option value="Geladeira / Freezer">Geladeira / Freezer</option>
+          <option value="Câmara Fria / Balcão Refrigerado">Câmara Fria / Balcão Refrigerado</option>
+          <option value="Instalação Elétrica / Disjuntor Dedicado">Instalação Elétrica / Disjuntor Dedicado</option>
+        </select>
+        <select id="inShift" class="px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-cyan-400">
+          <option value="Manhã (08h30 às 12h)">Turno: Manhã (08h30 às 12h)</option>
+          <option value="Tarde (13h30 às 18h)">Turno: Tarde (13h30 às 18h)</option>
+          <option value="Urgência / Hoje">Urgência (Verificar disponibilidade hoje)</option>
+        </select>
+      </div>
+
+      <textarea id="inProblemDesc" rows="2" placeholder="Descreva o que precisa (ex: não está gelando, pingando água, instalação de aparelho novo...)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400"></textarea>
+
+      <button id="btnSubmitVisitWA" type="button" class="w-full py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition">
+        📲 Enviar Pedido de Orçamento no WhatsApp
+      </button>
+    </section>
+
+    <footer class="text-center text-xs text-slate-500 pt-4 pb-8">
+      <p id="ftrText">AL Soluções · Refrigeração, Climatização &amp; Elétrica · Todos os direitos reservados</p>
+    </footer>
+  </main>
+
+  <!-- MODAL DE CONFIGURAÇÃO RÁPIDA -->
+  <div id="modalConfig" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h4 class="text-lg font-bold text-white">Editar Dados da Empresa</h4>
+        <button id="btnCloseConfig" type="button" class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 font-bold">✕</button>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div>
+          <label for="cfgName" class="block text-slate-400 font-semibold mb-1">Nome da Empresa</label>
+          <input id="cfgName" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white" />
+        </div>
+        <div>
+          <label for="cfgRegion" class="block text-slate-400 font-semibold mb-1">Cidades / Região de Atendimento</label>
+          <input id="cfgRegion" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white" />
+        </div>
+        <div>
+          <label for="cfgPhone" class="block text-slate-400 font-semibold mb-1">WhatsApp com DDD (somente números, ex: 5551999999999)</label>
+          <input id="cfgPhone" type="tel" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono-tech" />
+        </div>
+      </div>
+      <button id="btnSaveConfig" type="button" class="w-full py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold text-sm">
+        Salvar Configurações
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const CFG_KEY = 'al_refrigeracao_cfg_v1';
+    const defaultCfg = {
+      name: 'AL Soluções · Refrigeração & Clima',
+      region: 'Canoas · Porto Alegre e Região Metropolitana',
+      phone: '5551999999999'
+    };
+    let cfg = { ...defaultCfg };
+
+    const SERVICES = [
+      { id: 'inst_split', cat: 'ar', badge: 'Padrão Fabricante', title: 'Instalação de Split & Inverter', desc: 'Infraestrutura em cobre, flange, pressurização com nitrogênio, vácuo com vacuômetro e teste.' },
+      { id: 'higienizacao', cat: 'ar', badge: 'Saúde & Economia', title: 'Higienização Completa', desc: 'Limpeza química antibacteriana da evaporadora, turbina, bandeja, dreno e condensadora.' },
+      { id: 'carga_gas', cat: 'ar', badge: 'R410A / R32 / R22', title: 'Caça-Vazamento & Carga de Gás', desc: 'Detecção precisa de microvazamentos, reparo de solda e recarga por balança.' },
+      { id: 'manut_inverter', cat: 'ar', badge: 'Diagnóstico Eletrônico', title: 'Manutenção de Placa Inverter', desc: 'Reparo em erros de comunicação, sensores, capacitores e motoventiladores.' },
+      { id: 'camara_fria', cat: 'comercial', badge: 'Comercial', title: 'Câmaras Frias & Balcões', desc: 'Manutenção preventiva e corretiva em compressores, controladores digitais e degelo.' },
+      { id: 'geladeira', cat: 'comercial', badge: 'Residencial', title: 'Geladeiras & Freezers Frost Free', desc: 'Troca de termostato, resistência, bimetal, motor e recarga de fluido R134a / R600a.' },
+      { id: 'ponto_220', cat: 'eletrica', badge: 'NBR 5410', title: 'Ponto Dedicado 220V p/ Ar-Condicionado', desc: 'Circuito exclusivo direto do quadro com disjuntor adequado e cabeamento dimensionado.' },
+      { id: 'qdc', cat: 'eletrica', badge: 'Segurança Elétrica', title: 'Montagem de Quadro & DR/DPS', desc: 'Balanceamento de fases, proteção contra surtos e adequação para equipamentos.' }
+    ];
+
+    let activeCat = 'todos';
+    let lastBtuText = '9.000 ou 12.000 BTUs';
+
+    function loadCfg() {
+      try {
+        const raw = localStorage.getItem(CFG_KEY);
+        if (raw) cfg = { ...defaultCfg, ...JSON.parse(raw) };
+      } catch (e) {}
+      document.getElementById('hdrCompanyName').textContent = cfg.name;
+      document.getElementById('hdrRegion').textContent = cfg.region;
+      document.getElementById('ftrText').textContent = cfg.name + ' · Atendimento Técnico Especializado';
+    }
+
+    function sendWA(text) {
+      const num = (cfg.phone || '5551999999999').replace(/\D/g, '');
+      window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+    }
+
+    function calcBtu() {
+      const area = Math.max(4, Number(document.getElementById('inAreaM2').value) || 15);
+      const people = Math.max(1, Number(document.getElementById('inPeople').value) || 1);
+      const factor = Number(document.getElementById('inSun').value) || 600;
+      const rawBtu = (area * factor) + (Math.max(0, people - 1) * factor);
+
+      const sizes = [9000, 12000, 18000, 24000, 30000, 36000, 48000, 60000];
+      const rec = sizes.find(s => s >= rawBtu) || 60000;
+      lastBtuText = rec.toLocaleString('pt-BR') + ' BTUs';
+      document.getElementById('btuResultBadge').textContent = lastBtuText;
+      document.getElementById('btuExplanation').innerHTML = `Cálculo estimado (${rawBtu.toLocaleString('pt-BR')} BTUs): recomendamos <strong class="text-cyan-300">Split Inverter ${lastBtuText}</strong>.`;
+    }
+
+    function renderServices() {
+      const list = document.getElementById('servicesList');
+      const items = SERVICES.filter(s => activeCat === 'todos' || s.cat === activeCat);
+      list.innerHTML = items.map(s => `
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 text-[10px] font-bold uppercase tracking-wider">${s.badge}</span>
+            <h4 class="text-base font-bold text-white mt-2">${s.title}</h4>
+            <p class="text-xs text-slate-400 mt-1 leading-relaxed">${s.desc}</p>
+          </div>
+          <button type="button" data-srv="${s.title}" class="btn-srv-wa mt-4 w-full py-2.5 rounded-xl bg-slate-900 border border-cyan-500/35 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 font-bold text-xs transition">
+            📲 Orçar Este Serviço
+          </button>
+        </div>
+      `).join('');
+
+      list.querySelectorAll('.btn-srv-wa').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const title = btn.getAttribute('data-srv');
+          sendWA(`Olá! Vim pelo site da *${cfg.name}* ❄️\n\nGostaria de um orçamento para:\n• *${title}*`);
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCfg();
+      calcBtu();
+      renderServices();
+
+      ['inAreaM2', 'inPeople', 'inSun'].forEach(id => {
+        document.getElementById(id).addEventListener('input', calcBtu);
+      });
+
+      document.getElementById('btnSendBtuWA').addEventListener('click', () => {
+        sendWA(`Olá! Fiz o cálculo no site da *${cfg.name}* e preciso orçar um aparelho de *${lastBtuText}*!`);
+      });
+
+      document.querySelectorAll('.cat-chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCat = btn.getAttribute('data-cat');
+          document.querySelectorAll('.cat-chip').forEach(b => {
+            b.className = 'cat-chip px-4 py-2 rounded-full text-xs font-bold bg-slate-900 text-slate-400 border border-slate-800 whitespace-nowrap';
+          });
+          btn.className = 'cat-chip px-4 py-2 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 whitespace-nowrap';
+          renderServices();
+        });
+      });
+
+      document.getElementById('btnHeroWA').addEventListener('click', () => {
+        sendWA(`Olá! Vim pelo site da *${cfg.name}* e preciso de atendimento técnico em Refrigeração/Climatização.`);
+      });
+
+      document.getElementById('btnSubmitVisitWA').addEventListener('click', () => {
+        const name = document.getElementById('inClientName').value.trim() || 'Cliente';
+        const city = document.getElementById('inClientCity').value.trim() || 'Não informado';
+        const eq = document.getElementById('inEquipType').value;
+        const shift = document.getElementById('inShift').value;
+        const desc = document.getElementById('inProblemDesc').value.trim() || 'Orçamento / Avaliação técnica';
+        sendWA(`Olá! Sou *${name}* (${city}) e gostaria de agendar atendimento com a *${cfg.name}* ❄️\n\n• *Equipamento:* ${eq}\n• *Preferência:* ${shift}\n• *Detalhes:* ${desc}`);
+      });
+
+      const modal = document.getElementById('modalConfig');
+      document.getElementById('btnOpenSettings').addEventListener('click', () => {
+        document.getElementById('cfgName').value = cfg.name;
+        document.getElementById('cfgRegion').value = cfg.region;
+        document.getElementById('cfgPhone').value = cfg.phone;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+      document.getElementById('btnCloseConfig').addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+      document.getElementById('btnSaveConfig').addEventListener('click', () => {
+        cfg = {
+          name: document.getElementById('cfgName').value.trim() || defaultCfg.name,
+          region: document.getElementById('cfgRegion').value.trim() || defaultCfg.region,
+          phone: document.getElementById('cfgPhone').value.replace(/\D/g, '') || defaultCfg.phone
+        };
+        try { localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); } catch (e) {}
+        loadCfg();
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>
